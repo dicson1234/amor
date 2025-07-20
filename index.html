@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para ti niña</title>
+    <title>Para Ti ❤️</title>
     <style>
         * {
             margin: 0;
@@ -82,17 +82,15 @@
 
         .music-box {
             display: none;
-            background: rgba(0,0,0,0.8);
-            border: 2px solid #gold;
+            background: transparent !important; /* Fondo completamente transparente */
+            border: none;
             border-radius: 25px;
-            padding: 40px;
+            padding: 30px 10px;
             margin: 20px auto;
             max-width: 700px;
-            box-shadow: 
-                0 0 50px rgba(255,215,0,0.3),
-                inset 0 0 30px rgba(255,255,255,0.1);
+            box-shadow: none;
             animation: elegantEntrance 2s ease;
-            backdrop-filter: blur(15px);
+            backdrop-filter: none;
         }
 
         @keyframes elegantEntrance {
@@ -258,13 +256,89 @@
             50% { height: 40px; }
         }
 
-        @media (max-width: 768px) {
-            .snoopy { font-size: 80px; }
-            .couple-kiss { font-size: 80px; }
-            .lyrics-display { font-size: 22px; }
-            .message-text { font-size: 16px; }
-            .message-title { font-size: 24px; }
-        }
+        /* Fondo de imágenes/videos más claro */
+#backgroundMedia .media-item video,
+#backgroundMedia .media-item img {
+    filter: brightness(1.15) saturate(1.2);
+}
+
+/* Mejoras para móviles */
+@media (max-width: 768px) {
+    .snoopy { font-size: 80px; }
+    .couple-kiss { font-size: 80px; }
+    .lyrics-display { font-size: 18px; min-height: 30px; }
+    .message-text { font-size: 16px; }
+    .message-title { font-size: 24px; }
+    .music-box {
+        padding: 10px 2px;
+        max-width: 98vw;
+        background: rgba(255,255,255,0.13); /* Un poco más visible en móvil */
+    }
+    .audio-title { font-size: 16px; }
+}
+
+.special-message {
+    background: rgba(255,255,255,0.05); /* Muy transparente */
+    border-radius: 25px;
+    padding: 32px 18px;
+    margin: 30px auto;
+    max-width: 700px;
+    border: none;
+    box-shadow: none;
+    color: #222;
+    font-family: 'Times New Roman', serif;
+    position: relative;
+    z-index: 3;
+    text-align: left;
+    backdrop-filter: blur(12px); /* Blur fuerte para destacar el texto */
+    transition: opacity 1.2s cubic-bezier(.77,0,.18,1); /* Transición suave */
+    opacity: 0;
+}
+
+.special-message.show {
+    opacity: 1;
+}
+
+.special-title {
+    color: #ffd700;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 18px;
+    text-align: center;
+    text-shadow: 2px 2px 10px #000, 0 0 12px #ffd700;
+    letter-spacing: 1px;
+    transition: color 0.5s;
+}
+
+.special-text {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #222;
+    font-style: italic;
+    text-shadow: 1px 1px 8px #fff, 2px 2px 10px #000;
+    transition: color 0.5s;
+}
+
+.special-quote {
+    display: block;
+    color: #ff1744;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 16px 0;
+    text-align: center;
+    text-shadow: 2px 2px 10px #000, 0 0 18px #ffd700;
+}
+
+@media (max-width: 768px) {
+    .special-message {
+        padding: 12px 5px;
+        font-size: 15px;
+        max-width: 98vw;
+    }
+    .special-title { font-size: 1.3rem; }
+    .special-text { font-size: 15px; }
+    .special-quote { font-size: 16px; }
+}
     </style>
 </head>
 <body>
@@ -300,8 +374,8 @@
             <div class="couple-kiss">👨‍❤️‍💋‍👩</div>
         </div>
 
-        <div class="message-container">
-            <div class="message-title">Para la Mujer más Hermosa de este mundo✨</div>
+        <div class="message-container" id="mensajeInicial">
+            <div class="message-title">Para la Mujer más Hermosa ✨</div>
             <div class="message-text">
                 Quiero pedirte perdón de todo corazón. Reconozco mis errores y sé que no merezco su perdón, pero necesitaba decirte lo extraordinaria que eres.
                 <br><br>
@@ -310,6 +384,37 @@
                 No vengo a rogar, sino a reconocer tu valor y a pedirte perdón con sinceridad. Mereces todo el respeto y amor del mundo.
                 <br><br>
                 <span style="color: #ffd700; font-weight: bold;"> 💗y con todo mi cariño esto es para vos niña (oprime el perrito)💗</span>
+            </div>
+        </div>
+
+        <div class="special-message" id="mensajeEspecial" style="display:none;">
+            <div class="special-title">Solo quería que lo supieras 💛</div>
+            <div class="special-text">
+                Lo sé. Te fallé.<br>
+                No hay mucho que pueda decir para justificarlo.<br>
+                Pero si hoy te escribo, no es para pedirte nada…<br>
+                solo para que sepas que, a pesar de todo, lo que sentí por ti fue real.<br><br>
+                Fuiste eso que no se olvida con el tiempo,<br>
+                ni con distancia, ni con distracciones.<br>
+                Sigues apareciendo en mis pensamientos más tranquilos,<br>
+                como si el corazón todavía no entendiera que ya no estás.<br><br>
+                No he podido —ni querido— apartarte del todo.<br>
+                Y si alguna vez dudaste de lo que sentí,<br>
+                solo espero que puedas creer que nunca fuiste un juego.<br>
+                Tampoco una costumbre.<br>
+                Fuiste hogar.<br><br>
+                Y sí… me equivoqué.<br>
+                Rompí algo que valía demasiado.<br>
+                Pero me quedé con cada pedazo,<br>
+                como quien guarda en silencio lo que no supo cuidar.<br><br>
+                Te compartí esa canción porque tiene algo que yo no supe decirte a tiempo.<br>
+                Tiene ternura, deseo, un poco de locura…<br>
+                y esa frase que me grita por dentro cada vez que pienso en ti:<br>
+                <span class="special-quote">“Eres demasiado buena para ser verdad. No puedo dejar de mirarte.”</span><br>
+                Así te sentí siempre. Así te sigo sintiendo.<br><br>
+                Eso era todo.<br>
+                Sin drama, sin vueltas.<br>
+                Solo quería que lo supieras.
             </div>
         </div>
     </div>
@@ -422,11 +527,13 @@ const subtitulos = [
                 setTimeout(() => {
                     snoopy.style.display = 'none';
                     musicBox.style.display = 'block';
-                    
-                    // Intentar reproducir la música automáticamente
+                    // Mostrar mensaje especial y ocultar el inicial
+                    document.getElementById('mensajeInicial').style.display = 'none';
+                    const mensajeEspecial = document.getElementById('mensajeEspecial');
+                    mensajeEspecial.style.display = 'block';
+                    setTimeout(() => mensajeEspecial.classList.add('show'), 50);
                     setTimeout(() => {
                         audioPlayer.play().catch(function(error) {
-                            console.log("Autoplay bloqueado:", error);
                             lyrics.innerHTML = '🎵 Haz clic en PLAY para comenzar la magia 🎵';
                         });
                     }, 500);
